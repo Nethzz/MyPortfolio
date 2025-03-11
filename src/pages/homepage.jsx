@@ -25,6 +25,7 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
+import Education from "../components/homepage/Education";
 
 const Homepage = () =>
 {
@@ -208,6 +209,10 @@ const Homepage = () =>
 								</div>
 								<div className="homepage-works">
 									<Works />
+								</div>
+
+								<div className="homepage-works">
+									<Education />
 								</div>
 
 
