@@ -15,42 +15,63 @@ const Works = () =>
 				body={
 					<div className="works-body">
 						<div className="work">
-							<img
-								src="./company1.png"
-								alt="Company 1"
-								className="work-image"
-							/>
+
 							<div className="work-title">Software Engineer</div>
 							<div className="work-subtitle">
-								React Native, React.js, Node.js
+								React, React Native, Node.js, AWS, OpenAI APIs
 							</div>
-							<div className="work-duration">2020 - 2023</div>
+							<div className="work-duration">2021 - 2023</div>
+							<div className="work-description">
+								<ul>
+									<li>
+										Built and maintained reusable React components for scalable applications in an Agile environment.
+									</li>
+									<li>
+										Deployed applications on AWS and ensured smooth CI/CD workflows.
+									</li>
+									<li>
+										Enhanced user experiences by integrating OpenAI APIs into React projects.
+									</li>
+								</ul>
+							</div>
 						</div>
 
 						<div className="work">
-							<img
-								src="./company2.png"
-								alt="Company 2"
-								className="work-image"
-							/>
-							<div className="work-title">Mobile & Web Application Developer</div>
+
+							<div className="work-title">Software Engineer</div>
 							<div className="work-subtitle">
-								Android, C#, Unity, Flutter, React Native
+								React Native, Firebase, Vimeo API, OneSignal, Payment Gateways
 							</div>
-							<div className="work-duration">2016 - 2020</div>
+							<div className="work-duration">2020 - 2021</div>
+							<div className="work-description">
+								<ul>
+									<li>
+										Developed Android and iOS apps using React Native with optimized performance.
+									</li>
+									<li>
+										Integrated Vimeo API, Firebase, OneSignal, and payment gateways.
+									</li>
+								</ul>
+							</div>
 						</div>
 
 						<div className="work">
-							<img
-								src="./esigelec.png"
-								alt="ESIGELEC"
-								className="work-image"
-							/>
-							<div className="work-title">Master’s Student - Software Engineering</div>
+
+							<div className="work-title">Jr. Software Engineer</div>
 							<div className="work-subtitle">
-								Digital Transformation & Research
+								Java, Dart, RESTful API, Glide, Google Sign-In, Facebook Login
 							</div>
-							<div className="work-duration">2023 - Present</div>
+							<div className="work-duration">2017 - 2019</div>
+							<div className="work-description">
+								<ul>
+									<li>
+										Developed mobile applications in Java and Dart with seamless RESTful API integration.
+									</li>
+									<li>
+										Implemented third-party libraries (e.g., Glide, Google Sign-In, Facebook Login).
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				}
