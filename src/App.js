@@ -12,10 +12,14 @@ import Notfound from "./pages/404";
 
 import { TRACKING_ID } from "./data/tracking";
 import "./app.css";
+import Recognitions from "./pages/recognitions";
 
-function App() {
-	useEffect(() => {
-		if (TRACKING_ID !== "") {
+function App()
+{
+	useEffect(() =>
+	{
+		if (TRACKING_ID !== "")
+		{
 			ReactGA.initialize(TRACKING_ID);
 		}
 	}, []);
@@ -26,6 +30,7 @@ function App() {
 				<Route path="/" element={<Homepage />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/projects" element={<Projects />} />
+				<Route path="/recognitions" element={<Recognitions />} />
 				<Route path="/articles" element={<Articles />} />
 				<Route path="/article/:slug" element={<ReadArticle />} />
 				<Route path="/contact" element={<Contact />} />
