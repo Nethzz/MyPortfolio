@@ -22,6 +22,7 @@ const INFO = {
 			"Software Engineer with 7 years of experience specializing in web and mobile development. Skilled in React, Node.js, and Python, with a strong background in building scalable and efficient applications. Currently pursuing a Master’s in Software Engineering, I am passionate about leveraging my skills to drive innovation and deliver high-quality software solutions. Actively seeking opportunities to contribute to impactful projects and expand my expertise.",
 	},
 
+
 	about: {
 		title: "I’m Neethu Vasundharan Sheeja. I live in France and I am a passionate Software Engineer.",
 		description:

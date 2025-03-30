@@ -14,6 +14,26 @@ const SEO = [
 	},
 
 	{
+		page: "recognitions",
+		description:
+			"Explore my achievements, awards, and certifications in software engineering and digital transformation. From industry-recognized certifications to research accolades, these recognitions reflect my expertise, dedication, and passion for continuous learning.",
+		keywords: [
+			"Neethu",
+			"Neethu Vasundharan Sheeja",
+			"Software Engineer",
+			"Achievements",
+			"Awards",
+			"Recognitions",
+			"Certifications",
+			"React",
+			"Node.js",
+			"Python",
+			"Machine Learning",
+			"Digital Transformation",
+		],
+	},
+
+	{
 		page: "articles",
 		description:
 			"A collection of my thoughts on programming, leadership, software engineering, and technology trends. These articles reflect my passion for innovation and sharing insights on industry practices.",
