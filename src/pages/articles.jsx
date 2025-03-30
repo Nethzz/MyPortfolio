@@ -63,7 +63,7 @@ const Articles = () =>
 											title={article().title}
 											description={article().description}
 											medlink={article().medlink}
-											link={"/article/" + (index + 1)}
+
 										/>
 									</div>
 								))}
