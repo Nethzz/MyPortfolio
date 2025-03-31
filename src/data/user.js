@@ -1,6 +1,6 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
+		title: "neethu.dev",
 		name: "Neethu Vasundharan Sheeja.",
 		email: "neezsac@gmail.com",
 		logo: "../logo.png", // Replace with your logo image path
