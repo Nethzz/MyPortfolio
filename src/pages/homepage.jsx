@@ -181,29 +181,29 @@ const Homepage = () =>
 							</a>
 						</div>
 
-						<div className="homepage-projects">
-							<AllProjects />
+						<div className=" homepage-projects">
+							<h2 className="project-title">Projects</h2>
+
+							<p className="homepage-section-subtitle">
+								A selection of projects showcasing my experience in web, mobile, cloud, and AI systems.
+							</p>
+
+							<div >
+								<AllProjects />
+							</div>
 						</div>
 
+
 						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"https://neethuvasundharan.medium.com"}
-										/>
-									</div>
-								))}
-							</div>
+
+
 
 							<div className="homepage-works-container">
+								<h2 className="homepage-section-title center">Skills & Experience</h2>
+								<p className="homepage-section-subtitle center">
+									Technologies, tools, and experience gained over 7+ years in software engineering.
+								</p>
+
 								<div className="homepage-skills">
 									<Skills />
 								</div>
@@ -218,6 +218,31 @@ const Homepage = () =>
 
 							</div>
 
+						</div>
+
+
+						<div className="homepage-section">
+							<h2 className="homepage-section-title">Articles</h2>
+							<p className="homepage-section-subtitle">
+								Thoughts on software engineering, system design, and real-world development.
+							</p>
+
+							<div className="homepage-articles">
+								{myArticles.map((article, index) => (
+
+									<div
+										className="homepage-article"
+										key={(index + 1).toString()}
+									>
+										<Article
+											date={article().date}
+											title={article().title}
+											description={article().description}
+											link="https://neethuvasundharan.medium.com"
+										/>
+									</div>
+								))}
+							</div>
 						</div>
 
 						<div className="page-footer">
