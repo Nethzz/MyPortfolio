@@ -1,69 +1,80 @@
 @import "../../../data/styles.css";
 
-.education-body {
-    margin-bottom: 20px;
+/* --- Education Container --- */
+.homepage-education {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
+/* --- Education Item --- */
 .education-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 40px;
-    width: 400px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
 }
 
-.education-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
+/* --- Optional Image/Icon --- */
 .education-image {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: none;
 }
 
+/* --- Titles & Text --- */
 .education-title {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 700;
-    padding-left: 20px;
-    color: #333;
-    margin-top: 15px;
+    color: var(--secondary-color);
+    margin-bottom: 2px;
 }
 
 .education-subtitle {
-    font-size: 14px;
-    color: #555;
-    padding-left: 20px;
-    margin-top: 5px;
+    font-size: 0.95rem;
+    color: #111;
+    margin-bottom: 2px;
 }
 
 .education-duration {
-    font-size: 12px;
-    color: #888;
-    padding-left: 20px;
-    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #383839;
+    margin-bottom: 5px;
 }
 
 .education-description {
-    font-size: 14px;
-    color: #333;
-    padding-left: 20px;
-    margin-top: 10px;
+    font-size: 0.92rem;
+    color: #111;
+    margin-top: 5px;
 }
 
 .education-description ul {
     list-style-type: disc;
-    padding-left: 40px;
+    padding-left: 18px;
+    margin: 0;
 }
 
 .education-description li {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .homepage-education {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        width: 100%;
+    }
 }

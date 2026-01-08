@@ -1,69 +1,57 @@
 @import "../../../data/styles.css";
 
-.works-body {
-	margin-bottom: 20px;
+/* ===== Skills Wrapper ===== */
+.skills {
+	width: 100%;
 }
 
-.work {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	padding-bottom: 40px;
-	width: 400px;
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.work-image {
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
-	border: 3px solid #fff;
-	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
-}
-
-.work-title {
-	font-size: 18px;
-	font-weight: 700;
-	padding-left: 20px;
-	color: #333;
-	margin-top: 15px;
-}
-
-.work-subtitle {
-	font-size: 14px;
-	color: #555;
-	padding-left: 20px;
-	margin-top: 5px;
-}
-
-.work-duration {
-	font-size: 12px;
-	color: #888;
-	padding-left: 20px;
-	margin-top: 5px;
-}
-
-.work-description {
-	font-size: 14px;
-	color: #333;
-	padding-left: 20px;
+/* ===== Skills Body ===== */
+.skills-body {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 24px;
 	margin-top: 10px;
 }
 
-.work-description ul {
-	list-style-type: disc;
-	padding-left: 40px;
+/* ===== Skill Category Card ===== */
+.skill-category {
+	background: #ffffff;
+	border-radius: 14px;
+	padding: 18px 20px;
+	border: 1px solid #eaeaea;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.work-description li {
-	margin-bottom: 5px;
+.skill-category:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Category Title ===== */
+.skill-category h3 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 8px;
+	color: #111;
+	position: relative;
+}
+
+/* Accent underline */
+.skill-category h3::after {
+	content: "";
+	display: block;
+	width: 36px;
+	height: 3px;
+	background-color: #4f46e5;
+	margin-top: 6px;
+	border-radius: 2px;
+}
+
+/* ===== Skill Text ===== */
+.skill-category p {
+	font-size: 14px;
+	color: #555;
+	line-height: 1.6;
+	margin-top: 10px;
 }
