@@ -1,5 +1,6 @@
 @import "../../data/styles.css";
 
+/* --- Homepage Logo --- */
 .homepage-logo-container {
 	display: flex;
 	justify-content: left;
@@ -11,6 +12,7 @@
 	padding-top: 25px;
 }
 
+/* --- Hero Section --- */
 .homepage-first-area {
 	display: flex;
 	justify-content: space-between;
@@ -25,10 +27,16 @@
 
 .homepage-title {
 	width: 85% !important;
+	font-size: 2.8rem;
+	font-weight: 700;
+	color: #ffffff;
 }
 
 .homepage-subtitle {
 	width: 85% !important;
+	font-size: 1.1rem;
+	color: #bfc5cc;
+	margin-top: 8px;
 }
 
 .homepage-first-area-right-side {
@@ -51,6 +59,7 @@
 	width: 100%;
 }
 
+/* --- Social Icons --- */
 .homepage-socials {
 	display: flex;
 	justify-content: left;
@@ -69,68 +78,147 @@
 	color: var(--primary-color);
 }
 
-.homepage-after-title {
-	display: flex;
-}
-
+/* --- Projects Section --- */
 .homepage-projects {
-	flex-basis: 300px;
 	padding-top: 40px;
 }
 
-.homepage-articles {
-	flex-basis: 900px;
-	padding-top: 30px;
-	margin-left: -30px;
+.homepage-projects.project-title {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #292727;
+	/* Set desired color */
+	margin-bottom: 8px;
 }
 
-.homepage-article {
-	padding-bottom: 5px;
+
+.homepage-projects h2 {
+	color: #ffffff;
+	font-size: 2rem;
+	margin-bottom: 8px;
 }
 
-.homepage-works {
-	flex-basis: 600px;
-	padding-top: 30px;
+.homepage-projects p {
+	color: #bfc5cc;
+	margin-bottom: 20px;
+}
+
+/* --- Skills & Works --- */
+.homepage-after-title {
+	display: flex;
+	gap: 20px;
 }
 
 .homepage-works-container {
 	display: flex;
 	flex-direction: column;
-	/* Ensures vertical stacking */
-	gap: 2px;
-	/* Adds spacing between cards */
+	gap: 20px;
 }
 
-.homepage-skills {
-	padding-top: 2px;
-	/* Adds spacing */
+.homepage-skills,
+.homepage-works,
+.homepage-education {
+	min-height: 220px;
 }
 
+.card {
+	background: rgba(255, 255, 255, 0.02);
+	border-radius: 12px;
+	padding: 16px;
+	transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
 
+.card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Education --- */
+.education-body .education-item {
+	margin-bottom: 18px;
+}
+
+.education-title {
+	font-weight: 700;
+	color: var(--secondary-color);
+	margin-bottom: 4px;
+}
+
+/* --- Articles Section --- */
+.homepage-articles {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	padding-top: 30px;
+}
+
+.homepage-article {
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.homepage-article:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.homepage-article h3 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--primary-color);
+	margin-bottom: 8px;
+}
+
+.homepage-article p {
+	font-size: 0.95rem;
+	color: #c0c6cc;
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+
+.homepage-article .article-date {
+	font-size: 0.85rem;
+	color: #9aa0a6;
+	margin-bottom: 10px;
+}
+
+.homepage-article a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.homepage-article a:hover h3 {
+	color: var(--secondary-color);
+}
+
+/* --- Footer --- */
+.page-footer {
+	margin-top: 60px;
+}
+
+/* --- Responsive --- */
 @media (max-width: 1024px) {
 	.homepage-first-area {
 		flex-direction: column;
 	}
 
 	.homepage-first-area-left-side {
-		display: flex;
-		flex-direction: column;
-		/* Changed: set direction to column */
-		align-items: flex-start;
 		width: 100%;
+		align-items: flex-start;
 		order: 2;
 	}
 
-	.homepage-title {
-		width: 100% !important;
-		margin-top: 20px;
-		order: 2;
-	}
-
+	.homepage-title,
 	.homepage-subtitle {
 		width: 100% !important;
-		margin-top: 10px;
-		order: 3;
+		margin-top: 20px;
 	}
 
 	.homepage-first-area-right-side {
@@ -149,17 +237,61 @@
 		flex-direction: column;
 	}
 
-	.homepage-projects {
+	.homepage-projects,
+	.homepage-articles,
+	.homepage-works {
 		flex-basis: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.homepage-works-container {
+		grid-template-columns: 1fr;
+		padding: 18px;
+		margin-top: 28px;
 	}
 
 	.homepage-articles {
-		flex-basis: auto;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
+/* --- Section Titles --- */
+.homepage-section-title.center {
+	font-size: 2.2rem;
+	margin-bottom: 4px;
+	position: relative;
+	text-align: center;
+}
+
+.homepage-section-title.center::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: var(--primary-color);
+	margin: 12px auto 0;
+	border-radius: 2px;
+}
+
+.homepage-section-subtitle.center {
+	color: #bfc5cc;
+	max-width: 900px;
+	margin: 8px auto 18px;
+	line-height: 1.6;
+	text-align: center;
+}
+
+/* --- Fade Up Animation --- */
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
 	}
 
-	.homepage-works {
-		flex-basis: auto;
-		margin-left: -25px;
-		margin-right: -25px;
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
