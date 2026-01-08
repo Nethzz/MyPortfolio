@@ -2,56 +2,109 @@ const SEO = [
 	{
 		page: "home",
 		description:
-			"I am a Software Engineer with 7 years of experience specializing in web and mobile development. Skilled in React, Node.js, and Python, with a strong background in building scalable and efficient applications. Currently pursuing a Master’s in Software Engineering.",
-		keywords: ["Neethu", "Neethu Vasundharan Sheeja", "Software Engineer", "React", "Node.js", "Python"],
+			"Senior Software Engineer with 7+ years of experience building scalable, high-performance web and mobile applications. Expertise in React, React Native, Node.js, .NET, Python, and cloud-native architectures. Skilled in REST APIs, CI/CD pipelines, and solving complex production and scaling challenges.",
+		keywords: [
+			"Neethu",
+			"Neethu Vasundharan Sheeja",
+			"Senior Software Engineer",
+			"Full Stack Developer",
+			"React",
+			"React Native",
+			"Node.js",
+			".NET",
+			"Python",
+			"Cloud Native",
+			"AWS",
+			"CI/CD",
+		],
 	},
 
 	{
 		page: "about",
 		description:
-			"I am a Software Engineer with 7 years of experience in web and mobile development. I specialize in technologies such as React, Node.js, and Python. Currently pursuing a Master’s in Software Engineering to expand my expertise and contribute to innovative projects.",
-		keywords: ["Neethu", "Neethu Vasundharan Sheeja", "Software Engineer", "React", "Node.js", "Python", "Mobile Developer"],
+			"I am a Senior Software Engineer with 7+ years of experience developing scalable web and mobile applications. My expertise includes React, React Native, Node.js, .NET, Python, Vue.js, and Nuxt.js. I have strong experience in cloud-native systems, REST APIs, CI/CD pipelines, and mentoring teams in fast-paced environments.",
+		keywords: [
+			"Neethu",
+			"Neethu Vasundharan Sheeja",
+			"Senior Software Engineer",
+			"Full Stack Engineer",
+			"Web Developer",
+			"Mobile Developer",
+			"React",
+			"Vue.js",
+			"Nuxt.js",
+			"Node.js",
+			".NET",
+			"AWS",
+		],
 	},
 
 	{
 		page: "recognitions",
 		description:
-			"Explore my achievements, awards, and certifications in software engineering and digital transformation. From industry-recognized certifications to research accolades, these recognitions reflect my expertise, dedication, and passion for continuous learning.",
+			"Discover my professional achievements, certifications, and recognitions in software engineering, cloud technologies, and digital transformation. These accomplishments highlight my commitment to technical excellence, continuous learning, and real-world impact.",
 		keywords: [
 			"Neethu",
 			"Neethu Vasundharan Sheeja",
-			"Software Engineer",
+			"Senior Software Engineer",
 			"Achievements",
 			"Awards",
-			"Recognitions",
 			"Certifications",
-			"React",
-			"Node.js",
-			"Python",
-			"Machine Learning",
+			"Cloud Computing",
+			"Software Engineering",
 			"Digital Transformation",
+			"Machine Learning",
 		],
 	},
 
 	{
 		page: "articles",
 		description:
-			"A collection of my thoughts on programming, leadership, software engineering, and technology trends. These articles reflect my passion for innovation and sharing insights on industry practices.",
-		keywords: ["Neethu", "Neethu Vasundharan Sheeja", "Programming", "Leadership", "Software Engineering", "Technology Trends"],
+			"Read my articles on software engineering, system design, cloud architectures, testing strategies, leadership, and modern technology trends. I share practical insights gained from building and scaling production systems.",
+		keywords: [
+			"Neethu",
+			"Neethu Vasundharan Sheeja",
+			"Software Engineering",
+			"System Design",
+			"Cloud Architecture",
+			"Testing",
+			"Leadership",
+			"Technology Trends",
+		],
 	},
 
 	{
 		page: "projects",
 		description:
-			"I have worked on a variety of innovative projects across different domains, including object detection, human activity recognition, and mobile applications. Many of these projects are open-source and available for others to explore and contribute to.",
-		keywords: ["Neethu", "Neethu Vasundharan Sheeja", "Projects", "React Native", "Machine Learning", "Object Detection", "Mobile Apps"],
+			"I have built and contributed to diverse projects across web, mobile, cloud, and AI domains. My work includes scalable enterprise applications, object detection systems, RESTful APIs, and cloud-native solutions, many of which are open-source.",
+		keywords: [
+			"Neethu",
+			"Neethu Vasundharan Sheeja",
+			"Projects",
+			"React",
+			"React Native",
+			"Node.js",
+			".NET",
+			"Python",
+			"REST APIs",
+			"Object Detection",
+			"Cloud Applications",
+		],
 	},
 
 	{
 		page: "contact",
 		description:
-			"Interested in collaborating on software development or research projects? Feel free to reach out. I am open to new ideas and opportunities to work on impactful solutions.",
-		keywords: ["Neethu", "Neethu Vasundharan Sheeja", "Contact", "Collaboration", "Software Development", "Opportunities"],
+			"Looking to collaborate on scalable software solutions, cloud-based systems, or innovative projects? Get in touch to discuss opportunities, consulting, or technical collaborations.",
+		keywords: [
+			"Neethu",
+			"Neethu Vasundharan Sheeja",
+			"Senior Software Engineer",
+			"Contact",
+			"Collaboration",
+			"Consulting",
+			"Software Development",
+		],
 	},
 ];
 
