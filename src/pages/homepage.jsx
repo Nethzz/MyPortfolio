@@ -5,10 +5,7 @@ import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import
 {
-	faTwitter,
 	faGithub,
-	faStackOverflow,
-	faInstagram,
 	faMedium
 } from "@fortawesome/free-brands-svg-icons";
 
