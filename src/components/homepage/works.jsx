@@ -12,103 +12,350 @@ const Works = () =>
 				title="Work Experience"
 				body={
 					<div className="works-body">
-						{/* Stakimo Internship */}
-						<div className="work">
-							<div className="work-title">
-								Full Stack Developer Intern
+
+						{/* Ody */}
+						<div className="work current-role">
+							<div className="work-header">
+								<div>
+									<div className="work-title">
+										Product Manager & Senior Full-Stack Developer
+									</div>
+
+									<div className="work-company-row">
+										<div className="work-company">
+											Ody
+										</div>
+
+										<div className="current-status">
+											<span className="current-dot"></span>
+											Current
+										</div>
+									</div>
+								</div>
+
+								<span className="work-type">
+									Contract
+								</span>
 							</div>
-							<div className="work-subtitle">
-								Stakimo · Paris, France
+
+							<div className="work-meta">
+								<span>Paris, France</span>
+								<span>•</span>
+								<span>June 2026 – Present</span>
 							</div>
-							<div className="work-duration">2025 (5-month Academic Internship)</div>
+
 							<div className="work-description">
 								<ul>
 									<li>
-										Built and deployed SaaS web applications using Nuxt.js, Vue.js, PostgreSQL, and TypeScript.
+										Work across software development, product management, and quality
+										assurance for B2B and B2C web and mobile products.
 									</li>
+
 									<li>
-										Implemented automated end-to-end testing using Playwright.
+										Develop web and mobile features using TypeScript, React, Vite,
+										Expo, React Native, and TanStack React Query.
 									</li>
+
 									<li>
-										Contributed to Agile sprints, peer code reviews, and development of scalable, reusable components with automated test flows.
+										Build backend APIs with Hono and Cloudflare Workers using Neon
+										PostgreSQL, Drizzle ORM, OpenAPI, and Orval.
+									</li>
+
+									<li>
+										Contribute to a Turborepo monorepo supporting web, mobile,
+										backend services, and shared packages.
+									</li>
+
+
+
+									<li>
+										Translate business requirements into product specifications,
+										user stories, acceptance criteria, and development tasks.
+									</li>
+
+									<li>
+										Plan sprint priorities, coordinate developers, track delivery,
+										and collaborate across product, design, and engineering.
+									</li>
+
+									<li>
+										Perform functional, regression, integration, UI/UX, and
+										end-to-end testing; document bugs and validate fixes before release.
 									</li>
 								</ul>
+							</div>
+
+							<div className="work-tech-stack">
+								<span>TypeScript</span>
+								<span>React</span>
+								<span>Vite</span>
+								<span>Expo</span>
+								<span>React Native</span>
+								<span>TanStack Query</span>
+								<span>Hono</span>
+								<span>Cloudflare Workers</span>
+								<span>Neon PostgreSQL</span>
+								<span>Drizzle ORM</span>
+								<span>OpenAPI</span>
+								<span>Orval</span>
+								<span>Turborepo</span>
+								<span>Stripe</span>
+								<span>Cloudflare</span>
+							</div>
+						</div>
+
+						{/* Stakimo */}
+						<div className="work">
+							<div className="work-header">
+								<div>
+									<div className="work-title">
+										Full-Stack Developer Intern
+									</div>
+
+									<div className="work-company-row">
+										<div className="work-company">
+											Stakimo
+										</div>
+									</div>
+								</div>
+
+								<span className="work-type">
+									Internship
+								</span>
+							</div>
+
+							<div className="work-meta">
+								<span>Paris, France</span>
+								<span>•</span>
+								<span>2025 · 5 months</span>
+							</div>
+
+							<div className="work-description">
+								<ul>
+									<li>
+										Built and maintained SaaS web applications using
+										Nuxt.js, Vue.js, TypeScript, and PostgreSQL.
+									</li>
+
+									<li>
+										Developed reusable and scalable frontend components
+										and contributed to application functionality across
+										the development lifecycle.
+									</li>
+
+									<li>
+										Implemented automated end-to-end testing using
+										Playwright to improve regression coverage and reliability.
+									</li>
+
+									<li>
+										Contributed to Agile sprints, peer code reviews,
+										debugging, testing, and feature validation.
+									</li>
+								</ul>
+							</div>
+
+							<div className="work-tech-stack">
+								<span>Vue.js</span>
+								<span>Nuxt.js</span>
+								<span>TypeScript</span>
+								<span>PostgreSQL</span>
+								<span>Playwright</span>
+								<span>Git</span>
 							</div>
 						</div>
 
 						{/* Srishti Innovative */}
 						<div className="work">
-							<div className="work-title">
-								Senior Software Developer | Lead Developer
+							<div className="work-header">
+								<div>
+									<div className="work-title">
+										Senior Software Developer | Lead Developer
+									</div>
+
+									<div className="work-company-row">
+										<div className="work-company">
+											Srishti Innovative
+										</div>
+									</div>
+								</div>
+
+								<span className="work-type">
+									Full-time
+								</span>
 							</div>
-							<div className="work-subtitle">
-								Srishti Innovative · India
+
+							<div className="work-meta">
+								<span>India</span>
+								<span>•</span>
+								<span>2021 – 2025</span>
 							</div>
-							<div className="work-duration">2021 – 2025</div>
+
 							<div className="work-description">
 								<ul>
 									<li>
-										Led development of React.js web and React Native mobile applications, improving UI performance by 30% through reusable components.
+										Led development of React and React Native applications
+										and built reusable components for scalable web and mobile products.
 									</li>
+
 									<li>
-										Directed backend development with Node.js, Express.js, and MongoDB, ensuring 99.9% API uptime and integrating payment gateways, authentication, real-time data, and OpenAI APIs.
+										Designed and developed backend services using Node.js,
+										Express.js, MongoDB, PostgreSQL, and REST APIs.
 									</li>
+
 									<li>
-										Managed AWS deployments with CI/CD pipelines, reducing release cycles by 40%.
+										Implemented authentication, payment integrations,
+										real-time functionality, push notifications,
+										deep linking, analytics, and third-party APIs.
 									</li>
+
 									<li>
-										Mentored junior developers and led Agile sprints in collaboration with cross-functional teams.
+										Built offline-first mobile workflows using SQLite
+										and synchronization strategies.
+									</li>
+
+									<li>
+										Managed AWS deployments and CI/CD pipelines
+										while supporting production releases and issue resolution.
+									</li>
+
+									<li>
+										Led and mentored developers, performed code reviews,
+										supported technical decisions, and coordinated Agile development.
 									</li>
 								</ul>
+							</div>
+
+							<div className="work-tech-stack">
+								<span>React Native</span>
+								<span>React</span>
+								<span>TypeScript</span>
+								<span>JavaScript</span>
+								<span>Node.js</span>
+								<span>Express.js</span>
+								<span>PostgreSQL</span>
+								<span>MongoDB</span>
+								<span>SQLite</span>
+								<span>Firebase</span>
+								<span>AWS</span>
+								<span>Docker</span>
+								<span>CI/CD</span>
 							</div>
 						</div>
 
 						{/* Comdudes */}
 						<div className="work">
-							<div className="work-title">
-								Software Developer
+							<div className="work-header">
+								<div>
+									<div className="work-title">
+										Software Developer
+									</div>
+
+									<div className="work-company-row">
+										<div className="work-company">
+											Comdudes
+										</div>
+									</div>
+								</div>
+
+								<span className="work-type">
+									Full-time
+								</span>
 							</div>
-							<div className="work-subtitle">
-								Comdudes · India
+
+							<div className="work-meta">
+								<span>India</span>
+								<span>•</span>
+								<span>2020 – 2021</span>
 							</div>
-							<div className="work-duration">2020 – 2021</div>
+
 							<div className="work-description">
 								<ul>
 									<li>
-										Developed high-performance Android and iOS applications using React Native.
+										Developed cross-platform Android and iOS applications
+										using React Native.
 									</li>
+
 									<li>
-										Integrated Vimeo API, Firebase, OneSignal, and payment gateways.
+										Integrated Firebase, OneSignal, Vimeo,
+										payment gateways, notifications, and third-party services.
 									</li>
+
 									<li>
-										Designed and consumed RESTful APIs using Spring Boot.
+										Designed and consumed RESTful APIs
+										to support mobile application features.
+									</li>
+
+									<li>
+										Debugged production issues, improved application
+										reliability, and supported mobile releases.
 									</li>
 								</ul>
+							</div>
+
+							<div className="work-tech-stack">
+								<span>React Native</span>
+								<span>JavaScript</span>
+								<span>Firebase</span>
+								<span>OneSignal</span>
+								<span>Vimeo</span>
+								<span>REST APIs</span>
 							</div>
 						</div>
 
 						{/* Cerebtech */}
 						<div className="work">
-							<div className="work-title">
-								Jr. Software Developer
+							<div className="work-header">
+								<div>
+									<div className="work-title">
+										Junior Software Developer
+									</div>
+
+									<div className="work-company-row">
+										<div className="work-company">
+											Cerebtech
+										</div>
+									</div>
+								</div>
+
+								<span className="work-type">
+									Full-time
+								</span>
 							</div>
-							<div className="work-subtitle">
-								Cerebtech · India
+
+							<div className="work-meta">
+								<span>India</span>
+								<span>•</span>
+								<span>2017 – 2019</span>
 							</div>
-							<div className="work-duration">2017 – 2019</div>
+
 							<div className="work-description">
 								<ul>
 									<li>
-										Developed mobile applications using Java, Kotlin, and Dart with seamless RESTful API integration.
+										Developed Android and cross-platform mobile applications
+										using Java, Kotlin, Flutter, and Dart.
 									</li>
+
 									<li>
-										Implemented third-party libraries such as Glide, Google Sign-In, and Facebook Login.
+										Integrated REST APIs and third-party libraries
+										including Google Sign-In, Facebook Login, and Glide.
+									</li>
+
+									<li>
+										Worked on application debugging, maintenance,
+										performance improvements, and new feature development.
 									</li>
 								</ul>
 							</div>
+
+							<div className="work-tech-stack">
+								<span>Java</span>
+								<span>Kotlin</span>
+								<span>Flutter</span>
+								<span>Dart</span>
+								<span>REST APIs</span>
+							</div>
 						</div>
-
-
 
 					</div>
 				}
