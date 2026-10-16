@@ -9,7 +9,7 @@ This portfolio showcases my professional experience, technical skills, selected 
 ## 🌐 Portfolio Preview
 
 <!-- Replace this path with the actual path of your portfolio screenshot -->
-![Neethu Vasundharan Sheeja Portfolio](public/images/portfolio-preview.png)
+![Neethu Vasundharan Sheeja Portfolio](public/portfolio-preview.png)
 
 ## ✨ Features
 
