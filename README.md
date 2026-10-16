@@ -102,6 +102,4 @@ The generated files will be available in the `build/` directory.
 - **LinkedIn:** [Neethu Vasundharan](https://www.linkedin.com/in/neethu-vasundharan-225762150/)
 - **Medium:** [My articles](https://neethuvasundharan.medium.com/)
 
-## 📄 License
 
-This project is based on the Reactfolio open-source portfolio template. Refer to the repository's `LICENSE` file for applicable license terms.
