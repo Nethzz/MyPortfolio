@@ -17,6 +17,8 @@
 
 .read-article-container {
 	display: flex;
+	align-items: flex-start;
+	gap: clamp(16px, 4vw, 50px);
 	height: 100%;
 	margin: 0;
 	padding-top: 120px;
@@ -24,19 +26,20 @@
 
 .read-article-back {
 	padding-top: 68px;
-	padding-right: 50px;
-	width: 40px;
-	height: 40px;
+	flex: 0 0 50px;
 }
 
 .read-article-back-button {
-	width: 50px;
+	display: block;
+	width: 100%;
 	border-radius: 50%;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
 }
 
 .read-article-wrapper {
-	width: 80%;
+	flex: 1 1 0;
+	min-width: 0;
 	padding-top: 30px;
 }
 
@@ -57,6 +60,7 @@
 	padding-top: 50px;
 	padding-bottom: 50px;
 	width: 100% !important;
+	font-size: clamp(2rem, 5vw, 2.8rem);
 }
 
 .read-article-body {
@@ -65,4 +69,50 @@
 	line-height: 30px;
 	font-family: system-ui;
 	color: #52525b;
+	overflow-wrap: anywhere;
+}
+
+.read-article-body img,
+.read-article-body video,
+.read-article-body iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+.read-article-body pre {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.read-article-body table {
+	display: block;
+	width: max-content;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+	.read-article-container {
+		gap: 12px;
+		padding-top: 84px;
+	}
+
+	.read-article-back {
+		flex-basis: 36px;
+		padding-top: 16px;
+	}
+
+	.read-article-wrapper {
+		padding-top: 0;
+	}
+
+	.read-article-title {
+		padding-top: 28px;
+		padding-bottom: 28px;
+	}
+
+	.read-article-body {
+		font-size: 15px;
+		line-height: 1.8;
+	}
 }

@@ -35,10 +35,11 @@
 
 .articles-article {
 	padding-top: 0px;
-	padding-left: 35px;
+	padding-left: clamp(14px, 3vw, 35px);
 	padding-bottom: 20px;
 	border-left: 2px solid #f4f4f5;
 	width: 100%;
+	min-width: 0;
 }
 
 @media (max-width: 1024px) {
@@ -48,5 +49,13 @@
 
 	.articles-subtitle {
 		width: 100% !important;
+	}
+
+	.articles-main-container {
+		padding-top: 96px;
+	}
+
+	.articles-wrapper {
+		padding-top: 28px;
 	}
 }
