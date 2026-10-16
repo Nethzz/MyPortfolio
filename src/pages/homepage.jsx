@@ -37,6 +37,35 @@ const Homepage = () =>
 
 	useEffect(() =>
 	{
+		const sections = document.querySelectorAll(".homepage-reveal");
+
+		if (!("IntersectionObserver" in window))
+		{
+			sections.forEach((section) => section.classList.add("is-visible"));
+			return undefined;
+		}
+
+		const observer = new IntersectionObserver(
+			(entries) =>
+			{
+				entries.forEach((entry) =>
+				{
+					if (entry.isIntersecting)
+					{
+						entry.target.classList.add("is-visible");
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+		);
+
+		sections.forEach((section) => observer.observe(section));
+		return () => observer.disconnect();
+	}, []);
+
+	useEffect(() =>
+	{
 		const handleScroll = () =>
 		{
 			let scroll = Math.round(window.pageYOffset, 2);
@@ -178,49 +207,40 @@ const Homepage = () =>
 							</a>
 						</div>
 
-						<div className=" homepage-projects">
-							<h2 className="project-title">Projects</h2>
+						<div className="homepage-section homepage-experience homepage-reveal">
+							<h2 className="homepage-section-title center">Experience &amp; Education</h2>
+							<p className="homepage-section-subtitle center">
+								A look at the teams, products, and learning that have shaped my software engineering journey.
+							</p>
+							<div className="homepage-works">
+								<Works />
+							</div>
+							<div className="homepage-education">
+								<Education />
+							</div>
+						</div>
 
-							<p className="homepage-section-subtitle">
+						<div className="homepage-section homepage-skills-section homepage-reveal">
+							<h2 className="homepage-section-title center">Skills</h2>
+							<p className="homepage-section-subtitle center">
+								Technologies, tools, and practices I use to build reliable web, mobile, and cloud products.
+							</p>
+							<div className="homepage-skills">
+								<Skills />
+							</div>
+						</div>
+
+						<div className="homepage-section homepage-projects homepage-reveal">
+							<h2 className="homepage-section-title center">Projects</h2>
+							<p className="homepage-section-subtitle center">
 								A selection of projects showcasing my experience in web, mobile, cloud, and AI systems.
 							</p>
-
-							<div >
-								<AllProjects />
-							</div>
+							<AllProjects />
 						</div>
 
-
-						<div className="homepage-after-title">
-
-
-
-							<div className="homepage-works-container">
-								<h2 className="homepage-section-title center">Skills & Experience</h2>
-								<p className="homepage-section-subtitle center">
-									Technologies, tools, and experience gained over 7+ years in software engineering.
-								</p>
-
-								<div className="homepage-skills">
-									<Skills />
-								</div>
-								<div className="homepage-works">
-									<Works />
-								</div>
-
-								<div className="homepage-works">
-									<Education />
-								</div>
-
-
-							</div>
-
-						</div>
-
-
-						<div className="homepage-section">
-							<h2 className="homepage-section-title">Articles</h2>
-							<p className="homepage-section-subtitle">
+						<div className="homepage-section homepage-reveal">
+							<h2 className="homepage-section-title center">Articles</h2>
+							<p className="homepage-section-subtitle center">
 								Thoughts on software engineering, system design, and real-world development.
 							</p>
 
@@ -228,7 +248,7 @@ const Homepage = () =>
 								{myArticles.map((article, index) => (
 
 									<div
-										className="homepage-article"
+										className="homepage-article-item"
 										key={(index + 1).toString()}
 									>
 										<Article
