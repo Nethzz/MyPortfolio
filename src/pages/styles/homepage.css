@@ -8,6 +8,16 @@
 	padding-top: 130px;
 }
 
+.homepage-logo {
+	transition: transform 240ms ease, opacity 200ms ease;
+}
+
+.homepage-logo-hidden {
+	transform: translateY(calc(-100% - 16px));
+	opacity: 0;
+	pointer-events: none;
+}
+
 .homepage-container {
 	padding-top: 25px;
 }
@@ -272,5 +282,9 @@
 
 	.homepage-reveal {
 		transform: none;
+	}
+
+	.homepage-logo {
+		transition: none;
 	}
 }

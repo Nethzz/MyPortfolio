@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
@@ -27,8 +27,10 @@ import Education from "../components/homepage/Education";
 const Homepage = () =>
 {
 	const [stayLogo, setStayLogo] = useState(false);
+	const [hideLogo, setHideLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
+	const previousScrollY = useRef(0);
 
 	useEffect(() =>
 	{
@@ -66,9 +68,24 @@ const Homepage = () =>
 
 	useEffect(() =>
 	{
+		previousScrollY.current = window.pageYOffset;
+
 		const handleScroll = () =>
 		{
 			let scroll = Math.round(window.pageYOffset, 2);
+			const scrollDelta = scroll - previousScrollY.current;
+
+			if (Math.abs(scrollDelta) >= 6)
+			{
+				setHideLogo(scroll > 80 && scrollDelta > 0);
+				previousScrollY.current = scroll;
+			}
+
+			if (scroll <= 80)
+			{
+				setHideLogo(false);
+				previousScrollY.current = scroll;
+			}
 
 			let newLogoSize = 80 - (scroll * 4) / 10;
 
@@ -121,7 +138,10 @@ const Homepage = () =>
 				<NavBar active="home" />
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
-						<div style={logoStyle}>
+						<div
+							className={`homepage-logo${hideLogo ? " homepage-logo-hidden" : ""}`}
+							style={logoStyle}
+						>
 							<Logo width={logoSize} link={false} />
 						</div>
 					</div>

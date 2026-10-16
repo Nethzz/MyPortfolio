@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./styles/navBar.css";
@@ -6,11 +6,43 @@ import "./styles/navBar.css";
 const NavBar = (props) =>
 {
 	const { active } = props;
+	const [isHidden, setIsHidden] = useState(false);
+	const previousScrollY = useRef(0);
+
+	useEffect(() =>
+	{
+		previousScrollY.current = window.scrollY;
+
+		const handleScroll = () =>
+		{
+			const currentScrollY = window.scrollY;
+			const scrollDelta = currentScrollY - previousScrollY.current;
+
+			if (currentScrollY < 80)
+			{
+				setIsHidden(false);
+				previousScrollY.current = currentScrollY;
+				return;
+			}
+
+			if (Math.abs(scrollDelta) >= 6)
+			{
+				setIsHidden(scrollDelta > 0);
+				previousScrollY.current = currentScrollY;
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
 	return (
 		<React.Fragment>
 			<div className="nav-container">
-				<nav className="navbar">
+				<nav
+					className={`navbar${isHidden ? " navbar-hidden" : ""}`}
+					onFocusCapture={() => setIsHidden(false)}
+				>
 					<div className="nav-background">
 						<ul className="nav-list">
 							<li
