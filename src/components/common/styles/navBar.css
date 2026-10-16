@@ -17,6 +17,14 @@
 	transform: translateX(-50%);
 	width: min(400px, calc(100vw - 24px));
 	z-index: 999;
+	opacity: 1;
+	transition: transform 240ms ease, opacity 200ms ease;
+}
+
+.navbar.navbar-hidden {
+	transform: translate(-50%, calc(-100% - 16px));
+	opacity: 0;
+	pointer-events: none;
 }
 
 .nav-background {
@@ -66,5 +74,11 @@
 
 	.nav-list {
 		gap: 6px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.navbar {
+		transition: none;
 	}
 }
