@@ -1,9 +1,136 @@
 import React from "react";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
-
 import Card from "../common/card";
+import "./styles/skills.css";
 
-import "./styles/works.css";
+const skills = [
+    {
+        title: "Languages",
+        items: [
+            "TypeScript",
+            "JavaScript",
+            "Python",
+            "Java",
+            "Kotlin",
+            "C#",
+            "Dart",
+            "SQL",
+        ],
+    },
+    {
+        title: "Frontend & Mobile",
+        items: [
+            "React",
+            "React Native",
+            "Expo",
+            "Vite",
+            "Next.js",
+            "Vue.js",
+            "Nuxt.js",
+            "Flutter",
+            "HTML",
+            "CSS",
+        ],
+    },
+    {
+        title: "Backend & APIs",
+        items: [
+            "Node.js",
+            "Express.js",
+            "Hono",
+            "Cloudflare Workers",
+            ".NET",
+            "ASP.NET Core",
+            "REST APIs",
+            "OpenAPI",
+            "Orval",
+        ],
+    },
+    {
+        title: "Data & State Management",
+        items: [
+            "TanStack React Query",
+            "Drizzle ORM",
+            "PostgreSQL",
+            "Neon",
+            "MongoDB",
+            "MySQL",
+            "SQLite",
+            "Firebase Firestore",
+        ],
+    },
+    {
+        title: "Testing & Quality Assurance",
+        items: [
+            "Playwright",
+            "Jest",
+            "Vitest",
+            "End-to-End Testing",
+            "Regression Testing",
+            "Functional Testing",
+            "Integration Testing",
+            "UI/UX Testing",
+            "API Testing",
+            "Manual Testing",
+            "Test Case Design",
+            "Bug Validation",
+        ],
+    },
+    {
+        title: "Cloud & DevOps",
+        items: [
+            "Cloudflare",
+            "Cloudflare Workers",
+            "AWS",
+            "Docker",
+            "GitHub Actions",
+            "GitLab CI/CD",
+            "CI/CD",
+            "Turborepo",
+            "Git",
+            "GitHub",
+        ],
+    },
+    {
+        title: "Integrations & Tools",
+        items: [
+            "Stripe",
+            "Postman",
+            "Swagger",
+            "Figma",
+            "Firebase",
+            "OneSignal",
+            "OpenAI APIs",
+        ],
+    },
+    {
+        title: "Product Management",
+        items: [
+            "Product Requirements",
+            "User Stories",
+            "Acceptance Criteria",
+            "Sprint Planning",
+            "Feature Prioritization",
+            "Task Management",
+            "Product Documentation",
+            "Release Validation",
+            "Stakeholder Coordination",
+        ],
+    },
+    {
+        title: "Leadership & Methodologies",
+        items: [
+            "Agile",
+            "Scrum",
+            "Technical Leadership",
+            "Developer Mentoring",
+            "Code Review",
+            "Problem Solving",
+            "Cross-functional Collaboration",
+            "Client Communication",
+        ],
+    },
+];
 
 const Skills = () =>
 {
@@ -11,38 +138,34 @@ const Skills = () =>
         <div className="skills">
             <Card
                 icon={faCode}
-                title="Skills"
+                title="Skills & Expertise"
                 body={
                     <div className="skills-body">
-                        <div className="skill-category">
-                            <h3>Programming Languages</h3>
-                            <p>JavaScript, TypeScript, Python, Java, Kotlin, Swift, C#, R</p>
-                        </div>
+                        <p className="skills-intro">
+                            Technologies and practices I use across software development,
+                            mobile engineering, product management, and quality assurance.
+                        </p>
 
-                        <div className="skill-category">
-                            <h3>Web & Mobile Development</h3>
-                            <p>React, React Native, React Hooks, React Router, Flutter, Dart, Node.js, Express.js, HTML, CSS, JavaScript, Material UI</p>
-                        </div>
+                        <div className="skills-grid">
+                            {skills.map((category) => (
+                                <div
+                                    className="skill-category"
+                                    key={category.title}
+                                >
+                                    <h3>{category.title}</h3>
 
-                        <div className="skill-category">
-                            <h3>Backend & APIs</h3>
-                            <p>RESTful APIs, Vimeo API</p>
-                        </div>
-
-                        <div className="skill-category">
-                            <h3>Databases</h3>
-                            <p>MongoDB, SQLite, MySQL</p>
-                        </div>
-
-                        <div className="skill-category">
-                            <h3>DevOps & Tools</h3>
-                            <p>Docker, GitHub, JIRA, Asana, Trello</p>
-                        </div>
-
-                        <div className="skill-category">
-                            <h3>Soft Skills</h3>
-                            <p>Leadership, Project Management, Problem-Solving, MS Office</p>
-                            <p>Strong oral & written communication in English, Teamwork, Self-Motivation, Independence, Creativity</p>
+                                    <div className="skill-tags">
+                                        {category.items.map((skill) => (
+                                            <span
+                                                className="skill-tag"
+                                                key={skill}
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 }
