@@ -8,6 +8,8 @@
 }
 
 .project a {
+	display: block;
+	height: 100%;
 	text-decoration: none;
 }
 
@@ -23,7 +25,8 @@
 }
 
 .project-container {
-	padding: 30px;
+	height: 100%;
+	padding: clamp(16px, 2.5vw, 30px);
 }
 
 .project-logo {
@@ -65,8 +68,11 @@
 	font-weight: 700;
 }
 
-@media (max-width: 600px) {
-	.project {
-		height: 300px;
+@media (prefers-reduced-motion: reduce) {
+
+	.project,
+	.project:hover,
+	.project:hover .project-link {
+		transition: none;
 	}
 }

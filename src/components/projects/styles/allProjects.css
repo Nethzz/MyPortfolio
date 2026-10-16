@@ -4,19 +4,32 @@
 	align-items: stretch;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	margin-left: -35px;
-	margin-right: -35px;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 
 .all-projects-project {
-	width: calc(100% / 3);
+	width: 33.333%;
+	min-width: 0;
 	box-sizing: border-box;
 	padding: 10px;
-	overflow: hidden;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 	.all-projects-project {
-		width: calc(100% / 2);
+		width: 50%;
+	}
+}
+
+@media (max-width: 560px) {
+	.all-projects-container {
+		margin-right: -6px;
+		margin-left: -6px;
+	}
+
+	.all-projects-project {
+		width: 100%;
+		padding-right: 6px;
+		padding-left: 6px;
 	}
 }

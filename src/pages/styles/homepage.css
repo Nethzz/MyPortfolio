@@ -45,8 +45,8 @@
 }
 
 .homepage-image-container {
-	width: 370px;
-	height: 370px;
+	width: min(370px, 100%);
+	aspect-ratio: 1;
 }
 
 .homepage-image-wrapper {
@@ -56,7 +56,10 @@
 }
 
 .homepage-image-wrapper img {
+	display: block;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /* --- Social Icons --- */
@@ -202,6 +205,23 @@
 	.homepage-projects .all-projects-container {
 		margin-left: -10px;
 		margin-right: -10px;
+	}
+}
+
+@media (max-width: 600px) {
+	.homepage-image-container {
+		width: min(300px, 100%);
+		padding-top: 24px;
+		padding-bottom: 24px;
+		margin-left: 0;
+	}
+
+	.homepage-section-title.center {
+		font-size: clamp(1.7rem, 7vw, 2.2rem);
+	}
+
+	.homepage-section-subtitle.center {
+		margin-bottom: 22px;
 	}
 }
 

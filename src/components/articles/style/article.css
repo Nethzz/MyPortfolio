@@ -2,6 +2,9 @@
 
 .article {
 	display: flex;
+	align-items: flex-start;
+	min-width: 0;
+	gap: 16px;
 }
 
 .article a {
@@ -9,17 +12,20 @@
 }
 
 .article-left-side {
-	min-width: 20%;
-	max-width: 20%;
+	flex: 0 0 120px;
+	min-width: 0;
 }
 
 .article-right-side {
-	flex-basis: 80%;
-	min-width: 700px;
+	display: block;
+	flex: 1 1 0;
+	min-width: 0;
+	max-width: 100%;
 	mix-blend-mode: normal;
 	border-radius: 20px;
 	opacity: 0.8;
-	padding: 30px;
+	padding: clamp(16px, 3vw, 30px);
+	overflow-wrap: anywhere;
 }
 
 .article-right-side:hover {
@@ -55,15 +61,26 @@
 	font-weight: 700;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
+	.article {
+		flex-direction: column;
+		gap: 4px;
+	}
+
 	.article-left-side {
-		min-width: 10%;
-		max-width: 10%;
+		flex-basis: auto;
 	}
 
 	.article-right-side {
-		flex-basis: 90%;
-		min-width: 85%;
-		max-width: 85%;
+		width: 100%;
+		padding: 16px;
+	}
+
+	.article-date {
+		padding-top: 8px;
+	}
+
+	.article-description {
+		line-height: 1.7;
 	}
 }
