@@ -69,6 +69,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
 	.project,
 	.project:hover,
 	.project:hover .project-link {

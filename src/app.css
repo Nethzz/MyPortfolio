@@ -95,6 +95,7 @@ iframe {
 }
 
 @media (max-width: 1200px) {
+
 	.page-content:before,
 	.page-content:after {
 		display: none;
