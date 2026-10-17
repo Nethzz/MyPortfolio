@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import
-	{
-		faCode,
-		faBriefcase,
-		faRocket,
-		faArrowRight,
-	} from "@fortawesome/free-solid-svg-icons";
+{
+	faCode,
+	faBriefcase,
+	faRocket,
+	faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
@@ -135,7 +135,7 @@ const About = () =>
 
 						<div className="about-image-frame">
 							<img
-								src="/about.jpg"
+								src="/aboutimg.png"
 								alt="Neethu Vasundharan Sheeja"
 								className="about-image"
 							/>
