@@ -64,3 +64,88 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Make certificate images clickable */
+.certificate-image-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+/* Certificate hover effect */
+.certificate-image-button:hover .certificate-image {
+    transform: scale(1.02);
+}
+
+/* Full-screen popup overlay */
+.certificate-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: zoom-out;
+}
+
+/* Popup container */
+.certificate-modal-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 95vw;
+    max-height: 90vh;
+    cursor: default;
+}
+
+/* Large certificate image */
+.certificate-modal-image {
+    display: block;
+    max-width: 95vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    background: white;
+}
+
+/* Close button */
+.certificate-modal-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #222;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.certificate-modal-close:hover {
+    background: #eee;
+}
+
+/* Mobile responsive popup */
+@media (max-width: 600px) {
+    .certificate-modal {
+        padding: 12px;
+    }
+
+    .certificate-modal-close {
+        top: -12px;
+        right: -8px;
+    }
+}
