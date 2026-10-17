@@ -30,43 +30,54 @@ const INFO = {
 			"With 8+ years of professional software engineering experience, I work across development, product management, and quality assurance. I build scalable web and mobile applications, define product requirements, coordinate development, review implementations, perform functional and regression testing, and take features from initial business ideas through production release. My technical experience includes React Native, React, Next.js, TypeScript, Node.js, .NET, Python, Vue.js, Nuxt.js, PostgreSQL, MongoDB, Firebase, AWS, Docker, REST APIs, CI/CD, and automated testing.",
 	},
 
+
 	experience: {
 		title: "Professional Experience",
 		description:
-			"My experience combines hands-on software development, product ownership, technical leadership, and quality assurance across web and mobile products.",
+			"My experience combines software engineering, IT project management, product delivery, technical leadership, and quality assurance across web and mobile products.",
 
 		companies: [
 			{
 				company: "Ody",
 				location: "Paris, France",
 				role: "Product Manager & Senior Full-Stack Developer",
-				period: "June 2026 – Present",
+				period: "June 2026 – August 2026",
 				description:
-					"I work across software development, product management, and quality assurance, taking customer-facing features from initial requirements and product planning through implementation, testing, release, and production validation.",
+					"Combined product management, software development, delivery coordination, and quality assurance for a B2B/B2C SaaS platform.",
 
 				responsibilities: [
-					"Develop and maintain customer-facing web and mobile features across B2B and B2C products.",
-					"Translate business requirements and product ideas into clear specifications, workflows, user stories, and development tasks.",
-					"Plan sprint priorities, assign tasks, track progress, coordinate developers, and manage feature delivery.",
-					"Create product requirements and workflows for payments, reservations, loyalty, promotions, customer management, merchant tools, and platform improvements.",
-					"Collaborate with developers, designers, business stakeholders, and management throughout the product lifecycle.",
-					"Perform functional, regression, UI/UX, integration, and end-to-end testing across web, mobile, and tablet applications.",
-					"Create structured test scenarios and test cases for new features and critical user journeys.",
-					"Identify, reproduce, document, prioritize, and validate bugs before production releases.",
-					"Review implementations against product requirements, Figma designs, business rules, and expected user experience.",
-					"Investigate production issues, CI/CD failures, API problems, and application behaviour with the development team.",
-					"Participate in technical discussions, architecture decisions, debugging, and implementation reviews.",
-					"Validate completed tickets and releases before considering features production-ready.",
+					"Translated business requirements and product ideas into product requirements documents (PRDs), user stories, functional specifications, and acceptance criteria.",
+					"Planned sprint priorities, coordinated developers, tracked progress, and followed up on feature delivery.",
+					"Defined functional requirements and workflows for billing, Stripe payment integrations, loyalty programmes, promotional campaigns, customer management, and merchant tools.",
+					"Collaborated with product, design, engineering, and business stakeholders throughout the product lifecycle.",
+					"Contributed to web and mobile development using TypeScript, React, Vite, Expo, and React Native.",
+					"Worked with backend services using Hono, Cloudflare Workers, Neon PostgreSQL, Drizzle ORM, OpenAPI, and Orval.",
+					"Tracked implementation dependencies, technical issues, and delivery blockers.",
+					"Performed functional, regression, integration, UI/UX, and end-to-end testing across web, mobile, and tablet applications.",
+					"Created test scenarios, documented defects, and validated fixes before release.",
+					"Reviewed completed features against product requirements, designs, and expected user experience.",
 				],
 
 				technologies: [
-					"React",
-					"React Native",
+					"Product Management",
+					"Project Coordination",
+					"PRDs",
+					"Agile",
+					"Sprint Planning",
 					"TypeScript",
-					"Node.js",
-					"PostgreSQL",
-					"REST APIs",
-					"GitHub Actions",
+					"React",
+					"Vite",
+					"Expo",
+					"React Native",
+					"TanStack Query",
+					"Hono",
+					"Cloudflare Workers",
+					"Neon PostgreSQL",
+					"Drizzle ORM",
+					"OpenAPI",
+					"Orval",
+					"Turborepo",
+					"Stripe",
 					"Playwright",
 					"Vitest",
 					"Figma",
@@ -77,29 +88,42 @@ const INFO = {
 			{
 				company: "Srishti Innovative",
 				location: "India",
-				role: "Senior Software Developer / Lead Developer",
+				role: "Project Manager | Lead Developer | Senior Software Developer",
 				period: "2021 – 2025",
 				description:
-					"Worked as a senior and lead developer building production mobile and backend applications while guiding developers and contributing to architecture, development, debugging, testing, and release processes.",
+					"Combined IT project management and technical leadership with hands-on software development, coordinating a 10-person team and contributing to the delivery of web and mobile solutions.",
 
 				responsibilities: [
+					"Led a 10-person technical team in an Agile environment, coordinating responsibilities, priorities, project progress, and delivery commitments.",
+					"Managed project budgets and financial tracking, monitoring expenses, schedules, deadlines, and deliverables.",
+					"Coordinated technical teams and clients, gathered business requirements, communicated project progress, and supported acceptance of delivered solutions.",
+					"Contributed to project planning, sprint planning, milestone tracking, dependency management, and risk identification.",
+					"Followed up on blockers and delivery issues to support predictable project execution.",
+					"Oversaw the development and delivery of web and mobile solutions integrating REST APIs and payment systems, serving more than 10,000 users.",
 					"Built and maintained cross-platform mobile applications using React Native and TypeScript.",
-					"Designed offline-first application workflows using SQLite and synchronization strategies.",
-					"Implemented REST APIs and backend services using Node.js and Express.",
+					"Contributed to web applications using React and backend services using Node.js and Express.",
+					"Designed offline-first mobile workflows using SQLite and synchronization strategies.",
 					"Worked with PostgreSQL, MongoDB, Firebase, and cloud-based services.",
-					"Implemented deep linking, push notifications, analytics, and application lifecycle features.",
-					"Integrated third-party APIs and external services into production applications.",
-					"Led and mentored developers and supported technical decision-making.",
-					"Performed code reviews, debugging, testing, and production issue resolution.",
-					"Managed mobile application builds, CI/CD pipelines, and App Store / Play Store releases.",
+					"Managed mobile application builds, CI/CD pipelines, and App Store and Google Play releases.",
+					"Mentored developers, performed code reviews, supported technical decisions, and resolved production issues.",
+					"Contributed to performance improvements of approximately 30% through technical optimization.",
 				],
 
 				technologies: [
+					"Project Management",
+					"IT Project Delivery",
+					"Agile",
+					"Scrum",
+					"Sprint Planning",
+					"Budget & Cost Tracking",
+					"Team Leadership",
 					"React Native",
+					"React",
 					"TypeScript",
 					"JavaScript",
 					"Node.js",
 					"Express",
+					"REST APIs",
 					"SQLite",
 					"PostgreSQL",
 					"MongoDB",
@@ -114,22 +138,23 @@ const INFO = {
 				company: "Stakimo",
 				location: "Paris, France",
 				role: "Full-Stack Developer Intern",
-				period: "2025",
+				period: "May 2025 – October 2025",
 				description:
-					"Contributed to modern web applications using Vue.js, Nuxt.js, TypeScript, PostgreSQL, and automated end-to-end testing.",
+					"Contributed to SaaS web application development using Vue.js, Nuxt.js, TypeScript, NestJS, PostgreSQL, and automated testing.",
 
 				responsibilities: [
 					"Developed and maintained frontend features using Vue.js and Nuxt.js.",
-					"Built reusable components and implemented responsive interfaces.",
-					"Worked with TypeScript and PostgreSQL-based application workflows.",
-					"Implemented and maintained Playwright end-to-end tests.",
-					"Investigated bugs and supported feature validation before release.",
+					"Built reusable components and responsive user interfaces.",
+					"Worked with TypeScript, NestJS, and PostgreSQL-based application workflows.",
+					"Validated APIs and implemented automated end-to-end tests using Playwright.",
+					"Investigated bugs and contributed to Agile sprints, code reviews, and feature validation.",
 				],
 
 				technologies: [
 					"Vue.js",
 					"Nuxt.js",
 					"TypeScript",
+					"NestJS",
 					"PostgreSQL",
 					"Playwright",
 					"Git",
@@ -139,18 +164,17 @@ const INFO = {
 			{
 				company: "Comdudes",
 				location: "India",
-				role: "Software Developer",
+				role: "React Native Developer",
 				period: "2020 – 2021",
 				description:
-					"Developed cross-platform mobile applications and integrated cloud services, notifications, media functionality, and backend APIs.",
+					"Developed cross-platform mobile applications and integrated APIs, payment services, notifications, and third-party functionality.",
 
 				responsibilities: [
-					"Developed React Native applications for Android and iOS.",
-					"Integrated Firebase services and cloud-based application features.",
-					"Implemented push notifications using OneSignal.",
-					"Integrated video and media functionality using Vimeo services.",
-					"Worked with REST APIs and third-party integrations.",
-					"Debugged application issues and supported mobile releases.",
+					"Developed Android and iOS applications using React Native.",
+					"Integrated REST APIs and payment gateways.",
+					"Integrated Firebase services and OneSignal push notifications.",
+					"Implemented video and media functionality using Vimeo services.",
+					"Worked on third-party integrations, debugging, and mobile releases.",
 				],
 
 				technologies: [
@@ -160,39 +184,46 @@ const INFO = {
 					"OneSignal",
 					"Vimeo",
 					"REST APIs",
+					"Payment Integrations",
 				],
 			},
 
 			{
 				company: "Cerebtech",
 				location: "India",
-				role: "Junior Software Developer",
+				role: "Mobile Developer – Android & Flutter",
 				period: "2017 – 2019",
 				description:
-					"Started my professional software development career building Android and cross-platform mobile applications.",
+					"Developed Android and cross-platform mobile applications and integrated REST APIs and third-party libraries.",
 
 				responsibilities: [
-					"Developed native Android applications using Java.",
-					"Built cross-platform mobile features using Flutter and Dart.",
-					"Integrated APIs and backend services into mobile applications.",
+					"Developed mobile applications using Java, Kotlin, Flutter, and Dart.",
+					"Integrated REST APIs and backend services into mobile applications.",
+					"Implemented third-party libraries, including Glide, Google Sign-In, and Facebook Login.",
 					"Worked on application debugging, maintenance, and feature improvements.",
 				],
 
 				technologies: [
 					"Android",
 					"Java",
+					"Kotlin",
 					"Flutter",
 					"Dart",
 					"REST APIs",
+					"Glide",
+					"Google Sign-In",
+					"Facebook Login",
 				],
 			},
 		],
 	},
 
+
+
 	skills: {
 		title: "Skills & Technologies",
 		description:
-			"Technologies and tools I use across mobile development, web applications, backend systems, cloud infrastructure, testing, and product delivery.",
+			"My skills combine mobile and full-stack development, IT project management, product delivery, technical leadership, cloud infrastructure, and quality assurance.",
 
 		categories: [
 			{
@@ -208,9 +239,10 @@ const INFO = {
 					"SQLite",
 					"Push Notifications",
 					"Deep Linking",
+					"App Store Deployment",
+					"Google Play Deployment",
 				],
 			},
-
 			{
 				title: "Frontend Development",
 				skills: [
@@ -222,21 +254,27 @@ const INFO = {
 					"TypeScript",
 					"HTML",
 					"CSS",
+					"Responsive UI",
+					"Redux Toolkit",
 				],
 			},
-
 			{
 				title: "Backend Development",
 				skills: [
 					"Node.js",
-					"Express",
+					"Express.js",
+					"NestJS",
+					"Hono",
 					"REST APIs",
+					"OpenAPI",
+					"Python",
 					".NET",
 					"ASP.NET",
-					"Python",
+					"API Integration",
+					"Authentication",
+					"Payment Integrations",
 				],
 			},
-
 			{
 				title: "Databases",
 				skills: [
@@ -245,22 +283,26 @@ const INFO = {
 					"MySQL",
 					"SQLite",
 					"Firebase Firestore",
+					"Neon PostgreSQL",
+					"Drizzle ORM",
+					"Database Design",
 				],
 			},
-
 			{
 				title: "Cloud & DevOps",
 				skills: [
 					"AWS",
 					"Docker",
+					"Cloudflare Workers",
 					"GitHub Actions",
 					"GitLab CI/CD",
-					"CI/CD",
+					"CI/CD Pipelines",
 					"Git",
 					"GitHub",
+					"GitLab",
+					"Build & Release Management",
 				],
 			},
-
 			{
 				title: "Testing & Quality Assurance",
 				skills: [
@@ -272,28 +314,69 @@ const INFO = {
 					"Integration Testing",
 					"End-to-End Testing",
 					"API Testing",
-					"Bug Tracking",
 					"Test Case Design",
+					"Bug Tracking",
+					"Defect Analysis",
+					"Release Validation",
 				],
 			},
-
 			{
-				title: "Product & Leadership",
+				title: "Project Management & Delivery",
 				skills: [
-					"Product Management",
-					"Product Requirements",
+					"IT Project Management",
+					"Project Planning",
+					"Scope & Deliverable Tracking",
 					"Sprint Planning",
+					"Milestone Tracking",
+					"Task Allocation",
+					"Progress Reporting",
+					"Schedule Management",
+					"Budget & Cost Tracking",
+					"Risk Management",
+					"Dependency Tracking",
+					"Issue & Blocker Resolution",
+					"Resource Coordination",
+					"Delivery Management",
+					"Agile",
+					"Scrum",
+					"Jira",
+				],
+			},
+			{
+				title: "Product Management",
+				skills: [
+					"Product Requirements Documents (PRDs)",
+					"Requirements Gathering",
+					"User Stories",
+					"Acceptance Criteria",
 					"Feature Prioritization",
-					"Agile Development",
-					"Technical Leadership",
-					"Developer Mentoring",
-					"Code Review",
+					"Product Roadmaps",
+					"Feature Planning",
+					"Workflow Design",
+					"Stakeholder Management",
 					"Cross-functional Collaboration",
 					"Figma",
+					"Product Quality",
+				],
+			},
+			{
+				title: "Technical Leadership",
+				skills: [
+					"Technical Team Leadership",
+					"10-Person Team Coordination",
+					"Developer Mentoring",
+					"Code Reviews",
+					"Technical Decision-making",
+					"Architecture Discussions",
+					"Client Communication",
+					"Business–IT Coordination",
+					"Team Performance Tracking",
+					"Continuous Improvement",
 				],
 			},
 		],
 	},
+
 
 	articles: {
 		title:
