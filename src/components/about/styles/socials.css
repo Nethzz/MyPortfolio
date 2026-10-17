@@ -1,36 +1,114 @@
 @import "../../../data/styles.css";
+
+.socials {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 13px;
+}
+
 .social,
 .email-wrapper {
 	display: flex;
-	padding-bottom: 20px;
+	min-width: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .social a,
 .email-wrapper a {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	width: 100%;
+	min-width: 0;
+	box-sizing: border-box;
+	padding: 16px;
+	border: 1px solid #e3eee9;
+	border-radius: 13px;
+	background: #fff;
 	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		background 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.social a:hover,
+.email-wrapper a:hover {
+	transform: translateY(-3px);
+	border-color: #bce5d5;
+	background: #f5fbf7;
+	box-shadow: 0 10px 25px rgba(27, 76, 57, 0.07);
 }
 
 .social-icon {
-	font-size: 15px;
-	color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #dceee5;
+	border-radius: 11px;
+	background: #eef9f3;
+	color: #138b73;
+	font-size: 17px;
 }
 
 .social-text {
-	color: var(--secondary-color);
-	padding-left: 30px;
-	margin-top: -20px;
-	font-weight: 600;
-	font-size: 14px;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	overflow-wrap: anywhere;
+	color: #415b51;
+	font-size: 12px;
+	line-height: 1.5;
+	font-weight: 700;
+}
+
+.email {
+	grid-column: 1 / -1;
+	min-width: 0;
 }
 
 .email::before {
-	content: "";
-	display: block;
-	padding-top: 20px;
-	border-top: 3px solid #f4f4f5;
-	margin-top: 20px;
+	display: none;
 }
 
 .email-wrapper {
-	padding-top: 20px;
+	padding: 0;
+}
+
+.email-wrapper a {
+	border-color: #d7ebe1;
+	background: #f4faf6;
+}
+
+.email-wrapper .social-text {
+	color: #197c66;
+}
+
+@media (max-width: 560px) {
+	.socials {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 10px;
+	}
+
+	.email {
+		grid-column: auto;
+	}
+
+	.social a,
+	.email-wrapper a {
+		padding: 13px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.social a,
+	.email-wrapper a {
+		transition: none;
+	}
 }
