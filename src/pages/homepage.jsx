@@ -1,13 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+
+import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import
-{
-	faGithub,
-	faMedium
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faMedium } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
@@ -16,20 +13,18 @@ import Article from "../components/homepage/article";
 import Works from "../components/homepage/works";
 import Skills from "../components/homepage/skills";
 import AllProjects from "../components/projects/allProjects";
+import Education from "../components/homepage/Education";
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
-import Education from "../components/homepage/Education";
 
 const Homepage = () =>
 {
-	const [stayLogo, setStayLogo] = useState(false);
 	const [hideLogo, setHideLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
-	const [oldLogoSize, setOldLogoSize] = useState(80);
 	const previousScrollY = useRef(0);
 
 	useEffect(() =>
@@ -37,14 +32,19 @@ const Homepage = () =>
 		window.scrollTo(0, 0);
 	}, []);
 
+	// Reveal Home page sections when they enter the viewport.
 	useEffect(() =>
 	{
-		const sections = document.querySelectorAll(".homepage-reveal");
+		const sections = document.querySelectorAll(
+			".homepage-page .homepage-reveal"
+		);
 
 		if (!("IntersectionObserver" in window))
 		{
-			sections.forEach((section) => section.classList.add("is-visible"));
-			return undefined;
+			sections.forEach((section) =>
+				section.classList.add("is-visible")
+			);
+			return;
 		}
 
 		const observer = new IntersectionObserver(
@@ -59,20 +59,23 @@ const Homepage = () =>
 					}
 				});
 			},
-			{ threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+			{
+				threshold: 0.12,
+				rootMargin: "0px 0px -35px 0px",
+			}
 		);
 
 		sections.forEach((section) => observer.observe(section));
+
 		return () => observer.disconnect();
 	}, []);
 
+	// Keep the existing scroll-responsive logo behavior.
 	useEffect(() =>
 	{
-		previousScrollY.current = window.pageYOffset;
-
 		const handleScroll = () =>
 		{
-			let scroll = Math.round(window.pageYOffset, 2);
+			const scroll = window.pageYOffset;
 			const scrollDelta = scroll - previousScrollY.current;
 
 			if (Math.abs(scrollDelta) >= 6)
@@ -87,138 +90,133 @@ const Homepage = () =>
 				previousScrollY.current = scroll;
 			}
 
-			let newLogoSize = 80 - (scroll * 4) / 10;
-
-			if (newLogoSize < oldLogoSize)
-			{
-				if (newLogoSize > 40)
-				{
-					setLogoSize(newLogoSize);
-					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
-				} else
-				{
-					setStayLogo(true);
-				}
-			} else
-			{
-				setLogoSize(newLogoSize);
-				setStayLogo(false);
-			}
+			setLogoSize(Math.max(40, 80 - (scroll * 4) / 10));
 		};
 
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, [logoSize, oldLogoSize]);
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
+		return () =>
+		{
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	const currentSEO = SEO.find((item) => item.page === "home");
 
-	const logoStyle = {
-		display: "flex",
-		position: stayLogo ? "fixed" : "relative",
-		top: stayLogo ? "3vh" : "auto",
-		zIndex: 999,
-		border: stayLogo ? "1px solid white" : "none",
-		borderRadius: stayLogo ? "50%" : "none",
-		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
-	};
-
 	return (
-		<React.Fragment>
+		<>
 			<Helmet>
 				<title>{INFO.main.title}</title>
-				<meta name="description" content={currentSEO.description} />
+				<meta
+					name="description"
+					content={currentSEO?.description || ""}
+				/>
 				<meta
 					name="keywords"
-					content={currentSEO.keywords.join(", ")}
+					content={currentSEO?.keywords?.join(", ") || ""}
 				/>
 			</Helmet>
 
-			<div className="page-content">
+			<div className="page-content homepage-page">
 				<NavBar active="home" />
-				<div className="content-wrapper">
+
+				<main className="content-wrapper homepage-content">
 					<div className="homepage-logo-container">
 						<div
-							className={`homepage-logo${hideLogo ? " homepage-logo-hidden" : ""}`}
-							style={logoStyle}
+							className={`homepage-logo ${hideLogo ? "homepage-logo-hidden" : ""
+								}`}
 						>
 							<Logo width={logoSize} link={false} />
 						</div>
 					</div>
 
-					<div className="homepage-container">
+					{/* Hero */}
+					<section className="homepage-container">
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
-								<div className="title homepage-title">
-									{INFO.homepage.name}
-								</div>
-								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.title}
-								</div>
+								<span className="homepage-eyebrow">
+									SOFTWARE ENGINEERING · PRODUCT DEVELOPMENT
+								</span>
 
-								<div className="subtitle homepage-subtitle">
+								<h1 className="title homepage-title">
+									{INFO.homepage.name}
+								</h1>
+
+								<p className="subtitle homepage-subtitle homepage-role">
+									{INFO.homepage.title}
+								</p>
+
+								<p className="subtitle homepage-subtitle homepage-intro">
 									{INFO.homepage.description}
+								</p>
+
+								<div className="homepage-hero-actions">
+									<a
+										href="#homepage-projects"
+										className="homepage-primary-button"
+									>
+										Explore my projects
+										<span aria-hidden="true">↗</span>
+									</a>
+
+									<a
+										href={`mailto:${INFO.main.email}`}
+										className="homepage-secondary-button"
+									>
+										Contact me
+									</a>
 								</div>
 							</div>
 
 							<div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
+									<div className="homepage-image-decoration" />
 									<div className="homepage-image-wrapper">
 										<img
 											src="homepage.jpg"
-											alt="about"
+											alt="Portrait"
 											className="homepage-image"
 										/>
 									</div>
+									<span className="homepage-image-caption">
+										Building useful digital products
+									</span>
 								</div>
 							</div>
 						</div>
 
 						<div className="homepage-socials">
+							<span className="homepage-socials-label">
+								FIND ME ONLINE
+							</span>
+
 							<a
 								href={INFO.socials.medium}
 								target="_blank"
 								rel="noreferrer"
+								aria-label="Medium profile"
 							>
 								<FontAwesomeIcon
 									icon={faMedium}
 									className="homepage-social-icon"
 								/>
 							</a>
+
 							<a
 								href={INFO.socials.github}
 								target="_blank"
 								rel="noreferrer"
+								aria-label="GitHub profile"
 							>
 								<FontAwesomeIcon
 									icon={faGithub}
 									className="homepage-social-icon"
 								/>
 							</a>
-							{/* <a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a> */}
-							{/* <a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a> */}
+
 							<a
 								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
+								aria-label="Send me an email"
 							>
 								<FontAwesomeIcon
 									icon={faMailBulk}
@@ -226,69 +224,110 @@ const Homepage = () =>
 								/>
 							</a>
 						</div>
+					</section>
 
-						<div className="homepage-section homepage-experience homepage-reveal">
-							<h2 className="homepage-section-title center">Experience &amp; Education</h2>
-							<p className="homepage-section-subtitle center">
-								A look at the teams, products, and learning that have shaped my software engineering journey.
+					{/* Experience and education */}
+					<section className="homepage-section homepage-experience homepage-reveal">
+						<div className="homepage-section-heading">
+							<span className="homepage-section-kicker">
+								MY JOURNEY
+							</span>
+							<h2 className="homepage-section-title">
+								Experience &amp; Education
+							</h2>
+							<p className="homepage-section-subtitle">
+								The teams, products, and learning experiences
+								that have shaped my software engineering journey.
 							</p>
-							<div className="homepage-works">
-								<Works />
-							</div>
-							<div className="homepage-education">
-								<Education />
-							</div>
 						</div>
 
-						<div className="homepage-section homepage-skills-section homepage-reveal">
-							<h2 className="homepage-section-title center">Skills</h2>
-							<p className="homepage-section-subtitle center">
-								Technologies, tools, and practices I use to build reliable web, mobile, and cloud products.
-							</p>
-							<div className="homepage-skills">
-								<Skills />
-							</div>
+						<div className="homepage-works">
+							<Works />
 						</div>
 
-						<div className="homepage-section homepage-projects homepage-reveal">
-							<h2 className="homepage-section-title center">Projects</h2>
-							<p className="homepage-section-subtitle center">
-								A selection of projects showcasing my experience in web, mobile, cloud, and AI systems.
+						<div className="homepage-education">
+							<Education />
+						</div>
+					</section>
+
+					{/* Skills */}
+					<section className="homepage-section homepage-skills-section homepage-reveal">
+						<div className="homepage-section-heading">
+							<span className="homepage-section-kicker">
+								MY TOOLKIT
+							</span>
+							<h2 className="homepage-section-title">Skills</h2>
+							<p className="homepage-section-subtitle">
+								Technologies, tools, and practices I use to
+								build reliable web, mobile, and cloud products.
 							</p>
-							<AllProjects />
 						</div>
 
-						<div className="homepage-section homepage-reveal">
-							<h2 className="homepage-section-title center">Articles</h2>
-							<p className="homepage-section-subtitle center">
-								Thoughts on software engineering, system design, and real-world development.
+						<div className="homepage-skills">
+							<Skills />
+						</div>
+					</section>
+
+					{/* Projects */}
+					<section
+						id="homepage-projects"
+						className="homepage-section homepage-projects homepage-reveal"
+					>
+						<div className="homepage-section-heading">
+							<span className="homepage-section-kicker">
+								SELECTED WORK
+							</span>
+							<h2 className="homepage-section-title">Projects</h2>
+							<p className="homepage-section-subtitle">
+								A selection of projects showcasing my work
+								across web, mobile, cloud, and AI systems.
 							</p>
+						</div>
 
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
+						<AllProjects />
+					</section>
 
+					{/* Articles */}
+					<section className="homepage-section homepage-articles-section homepage-reveal">
+						<div className="homepage-section-heading">
+							<span className="homepage-section-kicker">
+								IDEAS &amp; INSIGHTS
+							</span>
+							<h2 className="homepage-section-title">Articles</h2>
+							<p className="homepage-section-subtitle">
+								Thoughts on software engineering, system
+								design, and real-world development.
+							</p>
+						</div>
+
+						<div className="homepage-articles">
+							{myArticles.map((article, index) =>
+							{
+								const item = article();
+
+								return (
 									<div
 										className="homepage-article-item"
-										key={(index + 1).toString()}
+										key={item.title || index}
 									>
 										<Article
-											date={article().date}
-											title={article().title}
-											description={article().description}
+											date={item.date}
+											title={item.title}
+											description={item.description}
 											link="https://neethuvasundharan.medium.com"
 										/>
 									</div>
-								))}
-							</div>
+								);
+							})}
 						</div>
+					</section>
 
-						<div className="page-footer">
-							<Footer />
-						</div>
+					<div className="page-footer">
+						<Footer />
 					</div>
-				</div>
+				</main>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 
